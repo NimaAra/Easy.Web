@@ -1,0 +1,18 @@
+﻿{
+  "dependencies": {
+    "Microsoft.AspNetCore.Http.Abstractions": "1.1.0",
+    "Microsoft.AspNetCore.Routing": "1.1.0",
+    "Microsoft.AspNetCore.Routing.Abstractions": "1.1.0",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0"
+  },
+
+  "frameworks": {
+    "net451": {},
+    "netstandard1.6": {
+      "dependencies": {
+        "System.Reflection.TypeExtensions": "4.3.0",
+        "NETStandard.Library": "1.6.1"
+      }
+    }
+  }
+}
