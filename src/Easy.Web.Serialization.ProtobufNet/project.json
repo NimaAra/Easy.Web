@@ -23,7 +23,7 @@
   },
 
   "dependencies": {
-    "Easy.Web.Core": {
+    "Easy.Web": {
       "target": "project"
     },
     "protobuf-net": "2.1.0"

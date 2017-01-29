@@ -24,7 +24,7 @@
 
   "dependencies": {
     "Newtonsoft.Json": "9.0.1",
-    "Easy.Web.Core": {
+    "Easy.Web": {
       "target": "project"
     }
   },

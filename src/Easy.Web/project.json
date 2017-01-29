@@ -62,7 +62,8 @@
     }
   },
   "buildOptions": {
-    "warningsAsErrors": true
+    "warningsAsErrors": true,
+    "outputName": "Easy.Web.Core"
   },
   "configurations": {
     "Release": {

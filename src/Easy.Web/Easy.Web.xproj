@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>59f17fef-69aa-4f25-b8d3-c9a30ec51e5b</ProjectGuid>
-    <RootNamespace>Easy.Web.Core</RootNamespace>
+    <ProjectGuid>f4186085-4e62-4333-8595-91fb530ff383</ProjectGuid>
+    <RootNamespace>Easy.Web</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>

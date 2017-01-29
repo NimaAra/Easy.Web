@@ -24,7 +24,7 @@
 
   "dependencies": {
     "NetJSON": "1.2.1.8",
-    "Easy.Web.Core": {
+    "Easy.Web": {
       "target": "project"
     }
   },

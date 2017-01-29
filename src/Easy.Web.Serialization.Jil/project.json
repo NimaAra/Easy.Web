@@ -24,7 +24,7 @@
 
   "dependencies": {
     "Jil": "2.15.0",
-    "Easy.Web.Core": {
+    "Easy.Web": {
       "target": "project"
     }
   },

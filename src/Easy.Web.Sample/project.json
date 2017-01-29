@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "Easy.Web": {
+      "target": "project"
+    },
     "Microsoft.AspNetCore.Diagnostics": "1.1.0",
     "Microsoft.AspNetCore.Server.IISIntegration": "1.1.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.1.0",
-    "Microsoft.Extensions.Logging.Console": "1.1.0",
-    "Easy.Web.Core": {
-      "target": "project"
-    }
+    "Microsoft.Extensions.Logging.Console": "1.1.0"
   },
 
   "tools": {

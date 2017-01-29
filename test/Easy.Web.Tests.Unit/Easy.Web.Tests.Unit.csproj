@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Easy.Web.Core">
-      <HintPath>..\..\src\Easy.Web.Core\bin\Debug\net451\Easy.Web.Core.dll</HintPath>
+    <Reference Include="Easy.Web.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\src\Easy.Web\bin\Debug\net451\Easy.Web.Core.dll</HintPath>
     </Reference>
     <Reference Include="Easy.Web.Serialization.Jil">
       <HintPath>..\..\src\Easy.Web.Serialization.Jil\bin\Debug\net451\Easy.Web.Serialization.Jil.dll</HintPath>

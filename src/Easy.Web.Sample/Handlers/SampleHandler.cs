@@ -1,12 +1,12 @@
 ﻿namespace Easy.Web.Sample.Handlers
 {
     using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Http;
+    using Microsoft.Extensions.Logging;
     using Core.Models;
     using Core.Helpers;
     using Core.Routing;
     using Core.Extensions;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.Extensions.Logging;
 
     public sealed class SampleHandler : Handler
     {
@@ -32,7 +32,7 @@
         [Route(HttpMethod.GET, "bind")]
         public static Task Bind(HttpContext context)
         {
-            var dynDic = context.BindToQueryString();
+            var dynDic = context.ReadFromQueryString();
 
             var id = dynDic["ID"];
             var category = dynDic["category"];
