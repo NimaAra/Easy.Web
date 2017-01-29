@@ -1,6 +1,7 @@
 ﻿namespace Easy.Web.Core.Routing
 {
     using System;
+    using System.Diagnostics;
     using Easy.Web.Core.Models;
 
     /// <summary>
@@ -14,6 +15,7 @@
         /// </summary>
         /// <param name="method">The <c>HTTP</c> method which this route matches.</param>
         /// <param name="routePattern">The pattern which this route matches.</param>
+        [DebuggerStepThrough]
         public RouteAttribute(HttpMethod method, string routePattern)
         {
             if (string.IsNullOrWhiteSpace(routePattern))

@@ -1,5 +1,5 @@
 ﻿// ReSharper disable InconsistentNaming
-namespace Easy.Web.Core.Models
+namespace Easy.Web.Core.Helpers
 {
     /// <summary>
     /// Represents most common media types.
@@ -18,9 +18,9 @@ namespace Easy.Web.Core.Models
         public const string JSON = "application/json";
 
         /// <summary>
-        /// <c>text/xml</c>
+        /// <c>application/xml</c>
         /// </summary>
-        public const string XML = "text/xml";
+        public const string XML = "application/xml";
 
         /// <summary>
         /// <c>text/html</c>
@@ -50,7 +50,7 @@ namespace Easy.Web.Core.Models
         /// <summary>
         /// <c>multipart/form-data</c>
         /// </summary>
-        public const string Form = "multipart/form-data";
+        public const string FormData = "multipart/form-data";
 
         /// <summary>
         /// <c>application/x-www-form-urlencoded</c>

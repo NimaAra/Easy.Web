@@ -1,11 +1,11 @@
-﻿namespace Easy.Web.Tests.Unit.TestModels
+﻿namespace Easy.Web.Tests.Unit.Handlers
 {
     using System.Threading.Tasks;
+    using Easy.Web.Core.Models;
+    using Easy.Web.Core.Routing;
     using Microsoft.AspNetCore.Http;
-    using Core.Models;
-    using Core.Routing;
 
-    public sealed class ChildController : ParentController
+    public sealed class ChildHandler : ParentHandler
     {
         [Route(HttpMethod.PUT, "/baz")]
         public Task OnPut(HttpContext context) => Task.FromResult(0);

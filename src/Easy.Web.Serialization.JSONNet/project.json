@@ -1,0 +1,51 @@
+﻿{
+  "version": "0.1.0-*",
+  "authors": [ "Nima Ara" ],
+  "title": "Newtonsoft (JSON.NET) (De)Serializer for Easy Web",
+  "name": "Easy.Web.Serialization.JSONNet",
+  "description": "Json.NET (De)Serializer for Easy Web.",
+  "copyright": "2017 Nima Ara",
+  "packOptions": {
+    "copyright": "2017 Nima Ara",
+    "owners": [ "Nima Ara" ],
+    "licenseUrl": "https://github.com/NimaAra/Easy.Web/blob/master/LICENSE",
+    "projectUrl": "https://github.com/NimaAra/Easy.Web",
+    "requireLicenseAcceptance": false,
+    "summary": "Json.NET (De)Serializer for Easy Web.",
+    "tags": [ "Easy", "Web", "JSON", "Serializer", "Deserializer", "Json.NET" ],
+    "releaseNotes": "",
+    "files": "bin\\Release\\net451\\Easy.Web.Serialization.JSONNet.xml",
+    "iconUrl": "",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NimaAra/Easy.Web"
+    }
+  },
+
+  "dependencies": {
+    "Newtonsoft.Json": "9.0.1",
+    "Easy.Web.Core": {
+      "target": "project"
+    }
+  },
+  "frameworks": {
+    "net451": {},
+    "netstandard1.6": {
+      "dependencies": {
+        "System.IO": "4.3.0",
+        "System.Text.Encoding": "4.3.0"
+      }
+    }
+  },
+  "buildOptions": {
+    "warningsAsErrors": true
+  },
+  "configurations": {
+    "Release": {
+      "buildOptions": {
+        "xmlDoc": true,
+        "optimize": true
+      }
+    }
+  }
+}

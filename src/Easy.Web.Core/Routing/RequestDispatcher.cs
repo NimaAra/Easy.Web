@@ -1,6 +1,7 @@
 ﻿namespace Easy.Web.Core.Routing
 {
     using System;
+    using System.Diagnostics;
     using System.Reflection;
     using System.Runtime.CompilerServices;
     using System.Threading.Tasks;
@@ -22,6 +23,7 @@
         /// </summary>
         /// <param name="handlerType">The type of handler.</param>
         /// <param name="method">The <see cref="MethodInfo"/> marked for handling the request.</param>
+        [DebuggerStepThrough]
         internal RequestDispatcher(Type handlerType, MethodInfo method)
         {
             HandlingType = handlerType;
@@ -52,6 +54,7 @@
         /// Dispatches the <paramref name="context"/> to the handler.
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        [DebuggerStepThrough]
         internal async Task DispatchAsync(HttpContext context)
         {
             if (_isStatic)

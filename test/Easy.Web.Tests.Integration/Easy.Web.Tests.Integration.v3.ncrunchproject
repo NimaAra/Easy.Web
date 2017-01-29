@@ -1,0 +1,8 @@
+﻿<ProjectConfiguration>
+  <Settings>
+    <BuildProcessArchitecture>x86</BuildProcessArchitecture>
+    <IgnoreThisComponentCompletely>True</IgnoreThisComponentCompletely>
+    <PreviouslyBuiltSuccessfully>True</PreviouslyBuiltSuccessfully>
+    <UseCPUArchitecture>AutoDetect</UseCPUArchitecture>
+  </Settings>
+</ProjectConfiguration>

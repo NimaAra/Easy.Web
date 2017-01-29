@@ -30,12 +30,8 @@
         /// </summary>
         public static void AddEasyWeb(this IServiceCollection services)
         {
-            var types = Assembly.GetEntryAssembly().GetTypes();
-            foreach (var type in types)
+            foreach (var type in GetHandlerTypes())
             {
-                var typeInfo = type.GetTypeInfo();
-                if (!typeInfo.IsSubclassOf(typeof(Handler))) { continue; }
-
                 services.AddScoped(type);
                 Handlers.Add(type);
             }
@@ -98,6 +94,28 @@
 
             var router = routeBuilder.Build();
             appBuilder.UseRouter(router);
+        }
+
+        private static IEnumerable<Type> GetHandlerTypes()
+        {
+#if NET_STANDARD
+            
+            foreach (var type in Assembly.GetEntryAssembly().GetTypes())
+            {
+                var typeInfo = type.GetTypeInfo();
+                if (!typeInfo.IsSubclassOf(typeof(Handler))) { continue; }
+                yield return type;
+            }
+#else
+            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                foreach (var type in assembly.GetTypes())
+                {
+                    if (!type.IsSubclassOf(typeof(Handler))) { continue; }
+                    yield return type;
+                }
+            }
+#endif
         }
 
         private static void RegisterRouteAndDispatcher(IRouteBuilder builder, RouteAttribute route, RequestDispatcher dispatcher)

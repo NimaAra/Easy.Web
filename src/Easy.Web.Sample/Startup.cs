@@ -1,7 +1,7 @@
 ﻿namespace Easy.Web.Sample
 {
     using System;
-    using Easy.Web.Core.Extensions;
+    using Core.Extensions;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -18,7 +18,7 @@
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IServiceProvider serviceProvider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -26,7 +26,7 @@
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseEasyWeb(serviceProvider);
+            app.UseEasyWeb(app.ApplicationServices);
 
             app.Run(async context =>
             {

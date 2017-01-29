@@ -1,6 +1,7 @@
 namespace Easy.Web.Core.Extensions
 {
     using System;
+    using System.Diagnostics;
     using System.Linq.Expressions;
     using System.Reflection;
     using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace Easy.Web.Core.Extensions
         /// <summary>
         /// Check if the given <paramref name="method"/> is a valid method for a <see cref="RouteAttribute"/> to invoke.
         /// </summary>
+        [DebuggerStepThrough]
         internal static bool IsValidRouteMethod(this MethodInfo method)
         {
             if (method.ReturnType == typeof(Task))
@@ -39,6 +41,7 @@ namespace Easy.Web.Core.Extensions
         /// Creates a <see cref="Func{Handler, RequestContext, Task}"/> from the given instance <paramref name="method"/>.
         /// </summary>
         // ReSharper disable once UnusedParameter.Global Used so that compiler can deduce T
+        [DebuggerStepThrough]
         internal static Func<Handler, HttpContext, Task> CreateDelegateForInstanceMethod(this MethodInfo method, Type handlerType)
         {
             var instanceParam = Expression.Parameter(typeof(Handler), "handler");
@@ -54,6 +57,7 @@ namespace Easy.Web.Core.Extensions
         /// <summary>
         /// Creates a <see cref="Func{RequestContext, Task}"/> from the given static <paramref name="method"/>.
         /// </summary>
+        [DebuggerStepThrough]
         internal static Func<HttpContext, Task> CreateDelegateForStaticMethod(this MethodInfo method, Type handlerType)
         {
             var argParam = Expression.Parameter(typeof(HttpContext), "requestCotnext");

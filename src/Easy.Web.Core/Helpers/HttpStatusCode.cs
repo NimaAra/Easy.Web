@@ -1,4 +1,4 @@
-﻿namespace Easy.Web.Core.Models
+﻿namespace Easy.Web.Core.Helpers
 {
     /// <summary>
     /// HTTP Status Codes
@@ -25,7 +25,7 @@
         /// <summary>
         /// 200 OK
         /// </summary>
-        Ok = 200,
+        Okay = 200,
         /// <summary>
         /// 201 Created
         /// </summary>
@@ -55,8 +55,9 @@
         /// </summary>
         MultipleStatus = 207,
         /// <summary>
-        /// 226 IMUsed
+        /// 226 IM Used
         /// </summary>
+        // ReSharper disable once InconsistentNaming
         IMUsed = 226,
         /// <summary>
         /// 300 MultipleChoices

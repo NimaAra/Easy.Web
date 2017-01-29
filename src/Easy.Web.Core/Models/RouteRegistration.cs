@@ -1,6 +1,7 @@
 ﻿namespace Easy.Web.Core.Models
 {
     using System;
+    using System.Diagnostics;
     using System.Reflection;
     using Easy.Web.Core.Routing;
 
@@ -14,6 +15,7 @@
         /// <summary>
         /// Creates an instance of the <see cref="RouteRegistration"/>.
         /// </summary>
+        [DebuggerStepThrough]
         internal RouteRegistration(RouteAttribute route, RequestDispatcher dispatcher)
         {
             Route = route;

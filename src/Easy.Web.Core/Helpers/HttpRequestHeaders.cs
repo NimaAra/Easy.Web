@@ -1,4 +1,4 @@
-﻿namespace Easy.Web.Core.Models
+﻿namespace Easy.Web.Core.Helpers
 {
     using System.Diagnostics.CodeAnalysis;
 

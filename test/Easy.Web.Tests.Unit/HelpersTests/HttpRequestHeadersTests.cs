@@ -1,6 +1,6 @@
 ﻿namespace Easy.Web.Tests.Unit.HelpersTests
 {
-    using Core.Models;
+    using Easy.Web.Core.Helpers;
     using NUnit.Framework;
     using Shouldly;
 

@@ -7,10 +7,10 @@
 
     using System.Runtime.CompilerServices;
     using Easy.Web.Core.Extensions;
-    using Easy.Web.Tests.Unit.TestModels;
     using Core.Models;
     using Core.Routing;
     using System.Linq;
+    using Easy.Web.Tests.Unit.Handlers;
     using Microsoft.AspNetCore.Http;
 
     [TestFixture]
@@ -70,7 +70,7 @@
         [Test]
         public void When_creating_delegate_from_instance_route_method()
         {
-            var instance = new ParentController();
+            var instance = new ParentHandler();
             var method = instance.GetType().GetMethod("OnGet");
             method.ShouldNotBeNull();
 
@@ -93,10 +93,10 @@
         [Test]
         public void When_creating_delegate_from_static_route_method()
         {
-            var method = typeof(ParentController).GetMethod("OnDelete");
+            var method = typeof(ParentHandler).GetMethod("OnDelete");
             method.ShouldNotBeNull();
 
-            var funcAsync = method.CreateDelegateForStaticMethod(typeof(ParentController));
+            var funcAsync = method.CreateDelegateForStaticMethod(typeof(ParentHandler));
             funcAsync.ShouldNotBeNull();
             funcAsync.Target.ShouldNotBeNull();
             funcAsync.Method.ShouldNotBeNull();

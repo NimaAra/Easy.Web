@@ -1,0 +1,59 @@
+﻿{
+  "version": "0.1.0-*",
+  "authors": [ "Nima Ara" ],
+  "title": "XML (De)Serializer for Easy Web",
+  "name": "Easy.Web.Serialization.XML",
+  "description": "XML (De)Serializer for Easy Web.",
+  "copyright": "2017 Nima Ara",
+  "packOptions": {
+    "copyright": "2017 Nima Ara",
+    "owners": [ "Nima Ara" ],
+    "licenseUrl": "https://github.com/NimaAra/Easy.Web/blob/master/LICENSE",
+    "projectUrl": "https://github.com/NimaAra/Easy.Web",
+    "requireLicenseAcceptance": false,
+    "summary": "XML (De)Serializer for Easy Web.",
+    "tags": [ "Easy", "Web", "XML", "Serializer", "Deserializer" ],
+    "releaseNotes": "",
+    "files": "bin\\Release\\net451\\Easy.Web.Serialization.XML.xml",
+    "iconUrl": "",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/NimaAra/Easy.Web"
+    }
+  },
+
+  "dependencies": {
+    "Easy.Web.Core": {
+      "target": "project"
+    }
+  },
+  "frameworks": {
+    "net451": {
+      "frameworkAssemblies": {
+        "System.Xml": { "type": "build" },
+        "System.Xml.Linq": { "type": "build" }
+      }
+    },
+    "netstandard1.6": {
+      "dependencies": {
+        "System.IO": "4.3.0",
+        "System.Text.Encoding": "4.3.0",
+        "System.Collections": "4.3.0",
+        "System.Xml.ReaderWriter": "4.3.0",
+        "System.Xml.XmlSerializer": "4.3.0",
+        "System.Xml.XDocument": "4.3.0"
+      }
+    }
+  },
+  "buildOptions": {
+    "warningsAsErrors": true
+  },
+  "configurations": {
+    "Release": {
+      "buildOptions": {
+        "xmlDoc": true,
+        "optimize": true
+      }
+    }
+  }
+}

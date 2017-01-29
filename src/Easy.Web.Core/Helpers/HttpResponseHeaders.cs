@@ -1,5 +1,5 @@
 ﻿// ReSharper disable InconsistentNaming
-namespace Easy.Web.Core.Models
+namespace Easy.Web.Core.Helpers
 {
     /// <summary>
     /// Represents a list of <c>HTTP</c> response headers.
@@ -51,9 +51,7 @@ namespace Easy.Web.Core.Models
 
         /// <summary>
         /// Used to express a typed relationship with another resource, where the relation type is defined by <c>RFC 5988</c>.
-#pragma warning disable 1570
-        /// <example><code>Link: </feed>; rel="alternate"</code></example>
-#pragma warning restore 1570
+        /// <example><code>Link: &lt;/feed&gt; rel="alternate"</code></example>
         /// </summary>
         public const string Link = "Link";
 
