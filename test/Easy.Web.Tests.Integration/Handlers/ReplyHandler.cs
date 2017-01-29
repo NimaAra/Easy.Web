@@ -1,6 +1,7 @@
 ﻿namespace Easy.Web.Tests.Integration.Handlers
 {
     using System;
+    using System.Diagnostics;
     using System.IO;
     using System.Threading.Tasks;
     using Easy.Web.Core.Models;
@@ -72,6 +73,9 @@
         public Task ReplyFile(HttpContext context)
         {
             var file = new FileInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sample.txt"));
+
+            Console.WriteLine("File size is: " + file.Length.ToString());
+
             return context.ReplyAsFile(file, MediaTypes.TEXT);
         }
     }
