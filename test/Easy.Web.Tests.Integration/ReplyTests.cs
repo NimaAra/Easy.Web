@@ -234,7 +234,7 @@
             headers.ShouldContain(h => h.Key == "Content-Type");
             headers.ShouldContain(h => h.Key == "Content-Disposition");
 
-            headers[0].Value.First().ShouldBeOneOf("11", "13");
+            headers[0].Value.First().ShouldBeOneOf("13");
             headers[1].Value.First().ShouldBe("attachment; filename=Sample.txt");
             headers[2].Value.First().ShouldBe(MediaTypes.TEXT);
 
