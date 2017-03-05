@@ -1,0 +1,46 @@
+version: 1.0.{build}
+build_script:
+- cmd: >-
+    @echo off
+
+    dotnet restore src\Easy.Web
+
+    dotnet build src\Easy.Web
+
+
+    dotnet restore src\Easy.Web.Serialization.Jil
+
+    dotnet build src\Easy.Web.Serialization.Jil
+
+
+    dotnet restore src\Easy.Web.Serialization.JSONNet
+
+    dotnet build src\Easy.Web.Serialization.JSONNet
+
+
+    dotnet restore src\Easy.Web.Serialization.NetJSON
+
+    dotnet build src\Easy.Web.Serialization.NetJSON
+
+
+    dotnet restore src\Easy.Web.Serialization.ProtobufNet
+
+    dotnet build src\Easy.Web.Serialization.ProtobufNet
+
+
+    dotnet restore src\Easy.Web.Serialization.XML
+
+    dotnet build src\Easy.Web.Serialization.XML
+
+
+    nuget restore test\Easy.Web.Tests.Unit\Easy.Web.Tests.Unit.csproj -PackagesDirectory .\packages
+
+    msbuild test\Easy.Web.Tests.Unit\Easy.Web.Tests.Unit.csproj
+
+
+    nuget restore test\Easy.Web.Tests.Integration\Easy.Web.Tests.Integration.csproj -PackagesDirectory .\packages
+
+    msbuild test\Easy.Web.Tests.Integration\Easy.Web.Tests.Integration.csproj
+    
+init:
+- git config --global core.autocrlf false
